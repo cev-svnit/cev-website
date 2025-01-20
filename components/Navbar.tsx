@@ -34,19 +34,24 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center justify-end flex-1 space-x-8">
             <a
-              href="/login"
+              href="/resources"
               className="font-vindey text-cnavy text-xl hover:text-blue transition-colors">
-              LOGIN
+              RESOURCS
             </a>
             <a
-              href="/news"
+              href="/alumni"
               className="font-vindey text-cnavy text-xl hover:text-blue transition-colors">
-              NEWS
+              ALUMNI
             </a>
             <a
               href="/events"
               className="font-vindey text-cnavy text-xl hover:text-blue transition-colors">
               EVENTS
+            </a>
+            <a
+              href="/team"
+              className="font-vindey text-cnavy text-xl hover:text-blue transition-colors">
+              TEAM
             </a>
             <a
               href="/"
@@ -74,21 +79,27 @@ const Navbar = () => {
         className="md:hidden overflow-hidden">
         <div className="px-2 text-center pt-2 pb-3 space-y-1 bg-off-white">
           <a
-            href="/login"
+            href="/resources"
             className="block px-3 py-2 font-vindey text-navy text-xl hover:text-blue">
-            LOGIN
+            RESOURCES
           </a>
           <div className="border-b border-navy mx-8" />
           <a
-            href="/news"
+            href="/alumni"
             className="block px-3 py-2 font-vindey text-navy text-xl hover:text-blue">
-            NEWS
+            ALUMNI
           </a>
           <div className="border-b border-navy mx-8" />
           <a
             href="/events"
             className="block px-3 py-2 font-vindey text-navy text-xl hover:text-blue">
             EVENTS
+          </a>
+          <div className="border-b border-navy mx-8" />
+          <a
+            href="/team"
+            className="block px-3 py-2 font-vindey text-navy text-xl hover:text-blue">
+            TEAM
           </a>
           <div className="border-b border-navy mx-8" />
           <a
