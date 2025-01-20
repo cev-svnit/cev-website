@@ -17,7 +17,8 @@ export default {
       },
       fontFamily: {
         vindey: ['vindey', 'Times New Roman'],
-        foundrey: ['foundrey', 'Times New Roman']
+        foundrey: ['foundrey', 'Times New Roman'],
+        horizon: ['horizon', 'Times New Roman']
       }
     },
   },

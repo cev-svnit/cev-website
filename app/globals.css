@@ -12,6 +12,11 @@
   src: url('/fonts/Foundry-Sans.ttf');
 }
 
+@font-face {
+  font-family: 'horizon';
+  src: url('/fonts/Horizon-Bold.otf');
+}
+
 * {
   margin: 0;
   padding: 0;
