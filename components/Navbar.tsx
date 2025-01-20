@@ -36,7 +36,7 @@ const Navbar = () => {
             <a
               href="/resources"
               className="font-vindey text-cnavy text-xl hover:text-blue transition-colors">
-              RESOURCS
+              RESOURCES
             </a>
             <a
               href="/alumni"
