@@ -1,0 +1,235 @@
+"use client";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import {
+  LucideIcon,
+  Paintbrush,
+  Cpu,
+  CircleDollarSign,
+  Quote,
+} from "lucide-react";
+import FloatingCircles from "./FloatingCircles";
+
+const iconMap: Record<string, LucideIcon> = {
+  Lorem: Paintbrush,
+  Ipsum: Cpu,
+  Dolor: CircleDollarSign,
+};
+
+const InfoSection = () => {
+  const visionStatements = [
+    {
+      title: "Lorem",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis ad nobis assumenda voluptate dolor? Repellat?",
+    },
+    {
+      title: "Ipsum",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, enim perferendis? Itaque, officiis corporis. Eius!",
+    },
+    {
+      title: "Dolor",
+      description:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis mollitia necessitatibus, nisi iusto nesciunt odio?",
+    },
+  ];
+
+  const testimonials = [
+    {
+      quote:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dicta nemo impedit ratione veniam iste iure doloribus provident alias architecto! Explicabo voluptatum quibusdam consectetur adipisci voluptatem reprehenderit esse quam nostrum.",
+      author: "Dr. Lorem",
+      role: "CSE",
+    },
+    {
+      quote:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima ipsam excepturi eaque tenetur quis soluta molestiae distinctio? Quod, ut iure. Necessitatibus accusantium corporis dolores, quisquam rerum perspiciatis voluptatem expedita iusto magnam.",
+      author: "Dr. Dolor",
+      role: "Dean",
+    },
+  ];
+
+  const visionRef = useRef(null);
+  const testimonialRef = useRef(null);
+  const visionInView = useInView(visionRef, { once: true });
+  const testimonialInView = useInView(testimonialRef, { once: true });
+
+  const sectionVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+    },
+    visible: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        delay: index * 0.2,
+        duration: 0.6,
+        type: "spring",
+        stiffness: 100,
+      },
+    }),
+    hover: {
+      scale: 1.05,
+      rotate: 2,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+      },
+    },
+  };
+
+  const backgroundVariants = {
+    initial: {
+      background: "linear-gradient(45deg, #e0e7ff, #f3e8ff)",
+      opacity: 0.7,
+    },
+    animate: {
+      background: [
+        "linear-gradient(45deg, #E0DDCF, #F1F0EA)",
+        "linear-gradient(135deg, #F1F0EA, #E0DDCF)",
+        "linear-gradient(225deg, #E0DDCF, #F1F0EA)",
+      ],
+      opacity: [0.7, 0.8, 0.7],
+      transition: {
+        duration: 5,
+        repeat: Infinity,
+        repeatType: "reverse" as const,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  return (
+    <div className="min-h-screen bg-off-white text-navy py-20 px-4 md:px-8 relative overflow-hidden">
+      <FloatingCircles />
+
+      <motion.div ref={visionRef} className="max-w-6xl mx-auto mb-20 relative">
+        <h2 className="text-4xl md:text-9xl text-navy font-vindey font-bold text-center mb-16">
+          Our Vision
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {visionStatements.map((vision, index) => {
+            const Icon = iconMap[vision.title];
+
+            return (
+              <motion.div
+                key={vision.title}
+                custom={index}
+                initial="hidden"
+                animate={visionInView ? "visible" : "hidden"}
+                variants={cardVariants}
+                whileHover="hover"
+                className="relative group">
+                <div className="absolute inset-0 bg-beige/60 backdrop-blur-md rounded-xl shadow-xl border-2 border-navy/10 transition-all duration-300 group-hover:shadow-2xl"></div>
+
+                <div className="relative z-10 bg-transparent p-6">
+                  <div className="flex flex-col items-center text-center">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: visionInView ? 1 : 0 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 20,
+                        delay: index * 0.2,
+                      }}
+                      className="mb-4 w-16 h-16 bg-navy/10 rounded-full flex items-center justify-center">
+                      <Icon className="w-8 h-8 text-navy" />
+                    </motion.div>
+
+                    <h3 className="text-2xl font-vindey font-bold mb-4 text-navy">
+                      {vision.title}
+                    </h3>
+
+                    <p className="text-navy/80 font-foundrey">
+                      {vision.description}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </motion.div>
+
+      <motion.div
+        ref={testimonialRef}
+        initial="hidden"
+        animate={testimonialInView ? "visible" : "hidden"}
+        variants={sectionVariants}
+        className="max-w-4xl mx-auto relative">
+        <h2 className="text-4xl md:text-9xl text-navy font-vindey font-bold text-center mb-16">
+          Testimonials
+        </h2>
+
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={backgroundVariants}
+          className="bg-beige border-2 border-navy/10 rounded-xl p-6 md:p-12 min-h-[400px] md:h-[800px] relative overflow-hidden flex flex-col justify-between">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={testimonial.author}
+              initial={{
+                opacity: 0,
+                x: index === 0 ? -50 : 50,
+              }}
+              animate={{
+                opacity: testimonialInView ? 1 : 0,
+                x: testimonialInView ? 0 : index === 0 ? -50 : 50,
+              }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.5,
+                ease: "easeOut",
+              }}
+              className={`
+                w-full relative 
+                ${index === 0 ? "mb-12 md:mb-0" : ""}
+                ${
+                  index === 0
+                    ? "md:absolute md:top-12 md:left-12 md:w-[calc(100%-6rem)]"
+                    : "md:absolute md:bottom-12 md:right-12 md:w-[calc(100%-6rem)] md:text-right"
+                }
+              `}>
+              <Quote className="text-navy mb-4 h-8 w-8" />
+              <p className="mb-6 text-navy font-foundrey italic text-base md:text-xl leading-relaxed">
+                "{testimonial.quote}"
+              </p>
+              <div className="border-t border-navy pt-4">
+                <p className="font-bold font-vindey text-2xl md:text-3xl">
+                  {testimonial.author}
+                </p>
+                <p className="text-xl md:text-2xl font-semibold text-navy font-vindey">
+                  {testimonial.role}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+};
+
+export default InfoSection;
