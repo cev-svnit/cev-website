@@ -13,6 +13,29 @@ export default function Home() {
         transition={{ duration: 0.5 }}>
         <Navbar />
       </motion.div>
+
+      <motion.div
+        className="absolute top-0 left-0 w-full h-full z-20 flex items-center justify-center"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, delay: 1.2 }}>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center bg-off-white/50 p-6 rounded-xl max-w-4xl w-full mx-4">
+          <h1 className="text-4xl md:text-5xl font-horizon text-beige leading-tight mb-2">
+            Bridging Innovation Across
+            <span className="block text-green">
+              <p className="text-navy">Finance,</p>
+              <p className="text-green">Technology,</p>
+              <p className="text-navy">Design</p>
+            </span>
+          </h1>
+          <p className="text-lg md:text-xl font-foundrey text-navy/80 max-w-2xl mx-auto">
+            A collaborative space where interdisciplinary minds converge to
+            challenge boundaries, spark creativity, and drive transformative
+            solutions.
+          </p>
+        </div>
+      </motion.div>
+
       <div className="flex flex-col md:flex-row">
         <motion.section
           className="relative w-full h-[33.333vh] md:h-screen md:w-1/3"
@@ -29,31 +52,10 @@ export default function Home() {
             Your browser does not support the video tag.
           </video>
           <motion.div
-            className="absolute inset-0 bg-black bg-opacity-50"
+            className="absolute inset-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}>
-            <motion.div
-              className="h-full cursor-default flex flex-col justify-center items-center"
-              whileHover={{ scale: 1.05 }}>
-              <motion.h1
-                className="text-3xl md:text-5xl font-horizon text-beige w-full text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.7 }}>
-                Cutting
-              </motion.h1>
-            </motion.div>
-            <motion.div
-              className="absolute bottom-0 right-0"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}>
-              <h2 className="text-xl md:text-2xl font-horizon text-beige">
-                Design
-              </h2>
-            </motion.div>
-          </motion.div>
+            transition={{ duration: 0.5, delay: 0.5 }}></motion.div>
         </motion.section>
 
         <motion.section
@@ -71,31 +73,10 @@ export default function Home() {
             Your browser does not support the video tag.
           </video>
           <motion.div
-            className="absolute inset-0 bg-black bg-opacity-50"
+            className="absolute inset-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.7 }}>
-            <motion.div
-              className="h-full cursor-default flex flex-col justify-center items-center"
-              whileHover={{ scale: 1.05 }}>
-              <motion.h1
-                className="text-3xl md:text-5xl font-horizon text-beige w-full text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.9 }}>
-                Edge
-              </motion.h1>
-            </motion.div>
-            <motion.div
-              className="absolute bottom-0 right-0"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.7 }}>
-              <h2 className="text-xl md:text-2xl font-horizon text-beige">
-                Technology
-              </h2>
-            </motion.div>
-          </motion.div>
+            transition={{ duration: 0.5, delay: 0.7 }}></motion.div>
         </motion.section>
 
         <motion.section
@@ -113,34 +94,13 @@ export default function Home() {
             Your browser does not support the video tag.
           </video>
           <motion.div
-            className="absolute inset-0 bg-black bg-opacity-50"
+            className="absolute inset-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.9 }}>
-            <motion.div
-              className="h-full cursor-default flex flex-col justify-center items-center"
-              whileHover={{ scale: 1.05 }}>
-              <motion.h1
-                className="text-3xl md:text-5xl font-horizon text-beige w-full text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.1 }}>
-                Visionaries
-              </motion.h1>
-            </motion.div>
-            <motion.div
-              className="absolute bottom-0 right-0"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.9 }}>
-              <h2 className="text-xl md:text-2xl font-horizon text-beige">
-                Finance
-              </h2>
-            </motion.div>
-          </motion.div>
+            transition={{ duration: 0.5, delay: 0.9 }}></motion.div>
         </motion.section>
       </div>
-      <Vision />
+      {/* <Vision /> */}
     </main>
   );
 }
