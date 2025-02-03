@@ -77,7 +77,7 @@ const Footer = () => {
               Links
             </h3>
             <ul className="space-y-1 sm:space-y-2 font-vindey text-center">
-              {["Home", "Team", "Events", "Alumni", "Resources"].map(
+              {["Home", "Team", "Events", "Alumni", "Resources", "Horizon"].map(
                 (item, index) => (
                   <motion.li key={item} variants={itemVariants}>
                     <motion.div whileHover="hover" variants={linkHoverVariants}>
