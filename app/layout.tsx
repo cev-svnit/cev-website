@@ -1,5 +1,4 @@
 import './globals.css';
-
 export const metadata = {
   title: 'CEV',
   description: 'Cutting Edge Visionaries',
@@ -12,7 +11,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   )
 }
