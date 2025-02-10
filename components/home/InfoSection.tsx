@@ -11,42 +11,42 @@ import {
 import FloatingCircles from "./FloatingCircles";
 
 const iconMap: Record<string, LucideIcon> = {
-  Lorem: Paintbrush,
-  Ipsum: Cpu,
-  Dolor: CircleDollarSign,
+  Design: Paintbrush,
+  Technology: Cpu,
+  Finance: CircleDollarSign,
 };
 
 const InfoSection = () => {
   const visionStatements = [
     {
-      title: "Lorem",
+      title: "Design",
       description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis ad nobis assumenda voluptate dolor? Repellat?",
+        "Crafting intuitive solutions through human-centered design thinking, where creativity meets functionality to solve real-world challenges.",
     },
     {
-      title: "Ipsum",
+      title: "Technology",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, enim perferendis? Itaque, officiis corporis. Eius!",
+        "Leveraging cutting-edge technologies and innovative engineering to build scalable solutions that drive digital transformation.",
     },
     {
-      title: "Dolor",
+      title: "Finance",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis mollitia necessitatibus, nisi iusto nesciunt odio?",
+        "Bridging financial innovation with sustainable practices to create value-driven solutions for tomorrow's economic challenges.",
     },
   ];
 
   const testimonials = [
     {
       quote:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dicta nemo impedit ratione veniam iste iure doloribus provident alias architecto! Explicabo voluptatum quibusdam consectetur adipisci voluptatem reprehenderit esse quam nostrum.",
-      author: "Dr. Lorem",
-      role: "CSE",
+        "CEV is doing a wonderful job. It is important to keep students aware about the peripheral development and CEV has been taking care of that.",
+      author: "Dr. Vipul Kheraj",
+      role: "Applied Physics Dept, SVNIT",
     },
     {
       quote:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima ipsam excepturi eaque tenetur quis soluta molestiae distinctio? Quod, ut iure. Necessitatibus accusantium corporis dolores, quisquam rerum perspiciatis voluptatem expedita iusto magnam.",
-      author: "Dr. Dolor",
-      role: "Dean",
+        "Nothing gets better when it comes to interdisciplinary approach for long-term solutions. CEV's interdisciplinary nature of work is a great platform to contribute. I personally wish CEV all accolades for strong visibility and many more stupendous moments.",
+      author: "Dr. Shrinivas S. Arkatkar",
+      role: "Civil Eng. Dept, SVNIT",
     },
   ];
 
@@ -123,7 +123,7 @@ const InfoSection = () => {
       <FloatingCircles />
 
       <motion.div ref={visionRef} className="max-w-6xl mx-auto mb-20 relative">
-        <h2 className="text-4xl md:text-9xl text-navy font-vindey font-bold text-center mb-16">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-montserrat font-semibold text-center mb-16 tracking-tight">
           Our Vision
         </h2>
 
@@ -140,9 +140,9 @@ const InfoSection = () => {
                 variants={cardVariants}
                 whileHover="hover"
                 className="relative group">
-                <div className="absolute inset-0 bg-beige/60 backdrop-blur-md rounded-xl shadow-xl border-2 border-navy/10 transition-all duration-300 group-hover:shadow-2xl"></div>
+                <div className="absolute inset-0 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-navy/5 transition-all duration-300 group-hover:shadow-xl"></div>
 
-                <div className="relative z-10 bg-transparent p-6">
+                <div className="relative z-10 bg-transparent p-8">
                   <div className="flex flex-col items-center text-center">
                     <motion.div
                       initial={{ scale: 0 }}
@@ -153,15 +153,15 @@ const InfoSection = () => {
                         damping: 20,
                         delay: index * 0.2,
                       }}
-                      className="mb-4 w-16 h-16 bg-navy/10 rounded-full flex items-center justify-center">
+                      className="mb-6 w-16 h-16 bg-off-white rounded-full flex items-center justify-center shadow-md">
                       <Icon className="w-8 h-8 text-navy" />
                     </motion.div>
 
-                    <h3 className="text-2xl font-vindey font-bold mb-4 text-navy">
+                    <h3 className="text-xl md:text-2xl font-montserrat font-semibold mb-4 text-navy">
                       {vision.title}
                     </h3>
 
-                    <p className="text-navy/80 font-foundrey">
+                    <p className="text-navy/80 font-inter text-base leading-relaxed">
                       {vision.description}
                     </p>
                   </div>
@@ -178,7 +178,7 @@ const InfoSection = () => {
         animate={testimonialInView ? "visible" : "hidden"}
         variants={sectionVariants}
         className="max-w-4xl mx-auto relative">
-        <h2 className="text-4xl md:text-9xl text-navy font-vindey font-bold text-center mb-16">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-montserrat font-semibold text-center mb-16 tracking-tight">
           Testimonials
         </h2>
 
@@ -186,7 +186,7 @@ const InfoSection = () => {
           initial="initial"
           animate="animate"
           variants={backgroundVariants}
-          className="bg-beige border-2 border-navy/10 rounded-xl p-6 md:p-12 min-h-[400px] md:h-[800px] relative overflow-hidden flex flex-col justify-between">
+          className="bg-white/90 backdrop-blur-sm border border-navy/5 rounded-xl p-8 md:p-12 min-h-[400px] md:h-[600px] relative overflow-hidden flex flex-col justify-between shadow-lg">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.author}
@@ -212,15 +212,15 @@ const InfoSection = () => {
                     : "md:absolute md:bottom-12 md:right-12 md:w-[calc(100%-6rem)] md:text-right"
                 }
               `}>
-              <Quote className="text-navy mb-4 h-8 w-8" />
-              <p className="mb-6 text-navy font-foundrey italic text-base md:text-xl leading-relaxed">
+              <Quote className="text-navy/40 mb-6 h-8 w-8" />
+              <p className="mb-6 text-navy/90 font-inter italic text-base md:text-lg leading-relaxed">
                 "{testimonial.quote}"
               </p>
-              <div className="border-t border-navy pt-4">
-                <p className="font-bold font-vindey text-2xl md:text-3xl">
+              <div className="border-t border-navy/10 pt-4">
+                <p className="font-montserrat font-semibold text-lg md:text-xl text-navy">
                   {testimonial.author}
                 </p>
-                <p className="text-xl md:text-2xl font-semibold text-navy font-vindey">
+                <p className="text-base md:text-lg font-medium text-navy/70 font-inter">
                   {testimonial.role}
                 </p>
               </div>

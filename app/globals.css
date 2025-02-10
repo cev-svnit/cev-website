@@ -17,6 +17,41 @@
   src: url('/fonts/Horizon-Bold.otf');
 }
 
+@font-face {
+  font-family: 'adallyn';
+  src: url('/fonts/Adallyn.ttf');
+}
+
+@font-face {
+  font-family: 'adallynBold';
+  src: url('/fonts/Adallyn-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url('/fonts/Inter.otf');
+}
+
+@font-face {
+  font-family: 'lora';
+  src: url('/fonts/Lora.ttf');
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('/fonts/Montserrat.ttf');
+}
+
+@font-face {
+  font-family: 'newYork';
+  src: url('/fonts/NewYork.otf');
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('/fonts/Poppins.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;

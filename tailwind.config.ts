@@ -68,7 +68,35 @@ export default {
   			horizon: [
   				'horizon',
   				'Times New Roman'
-  			]
+  			],
+			adallyn: [
+				'adallyn',
+				'Times New Roman'
+			],
+			adallynBold: [
+				'adallynBold',
+				'Times New Roman'
+			],
+			inter: [
+				'inter',
+				'Times New Roman'
+			],
+			lora: [
+				'lora',
+				'Times New Roman'
+			],
+			montserrat: [
+				'montserrat',
+				'Times New Roman'
+			],
+			newYork: [
+				'newYork',
+				'Times New Roman'
+			],
+			poppins: [
+				'poppins',
+				'Times New Roman'
+			]
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
