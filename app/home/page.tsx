@@ -2,14 +2,14 @@ import Navbar from "@/components/Navbar";
 
 import Footer from "@/components/Footer";
 
-import LandingPage from "@/components/landingpage"
+import EventsPage from "@/components/eventspage"
 
 export default function Home() {
   return (
     <>
       <Navbar />
 
-      <LandingPage />
+      <EventsPage />
 
       <Footer />
 
