@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="bg-off-white shadow-md"
+      className="fixed top-0 left-0 right-0 bg-off-white/80 backdrop-blur-sm shadow-sm z-50"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}>
@@ -34,29 +34,34 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center justify-end flex-1 space-x-8">
             <a
-              href="/resources"
+              href="/horizon"
               className="font-vindey text-cnavy text-xl hover:text-blue transition-colors">
-              RESOURCES
+              HORIZON
+            </a>
+            <a
+              href="/resources"
+              className="font-montserrat text-navy text-base font-medium hover:text-blue transition-colors">
+              Resources
             </a>
             <a
               href="/alumni"
-              className="font-vindey text-cnavy text-xl hover:text-blue transition-colors">
-              ALUMNI
+              className="font-montserrat text-navy text-base font-medium hover:text-blue transition-colors">
+              Alumni
             </a>
             <a
               href="/events"
-              className="font-vindey text-cnavy text-xl hover:text-blue transition-colors">
-              EVENTS
+              className="font-montserrat text-navy text-base font-medium hover:text-blue transition-colors">
+              Events
             </a>
             <a
               href="/team"
-              className="font-vindey text-cnavy text-xl hover:text-blue transition-colors">
-              TEAM
+              className="font-montserrat text-navy text-base font-medium hover:text-blue transition-colors">
+              Team
             </a>
             <a
               href="/"
-              className="font-vindey text-cnavy text-xl hover:text-blue transition-colors">
-              HOME
+              className="font-montserrat text-navy text-base font-medium hover:text-blue transition-colors">
+              Home
             </a>
           </div>
 
@@ -65,7 +70,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-navy hover:text-blue p-2 z-10"
+              className="text-navy hover:text-blue p-2"
               aria-label="Toggle menu">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -76,36 +81,36 @@ const Navbar = () => {
       <motion.div
         initial={false}
         animate={{ height: isMenuOpen ? "auto" : 0 }}
-        className="md:hidden overflow-hidden">
-        <div className="px-2 text-center pt-2 pb-3 space-y-1 bg-off-white">
+        className="md:hidden overflow-hidden fixed top-16 left-0 right-0 bg-off-white/80 backdrop-blur-sm z-50">
+        <div className="px-2 text-center pt-2 pb-3 space-y-1">
           <a
             href="/resources"
-            className="block px-3 py-2 font-vindey text-navy text-xl hover:text-blue">
-            RESOURCES
+            className="block px-3 py-2 font-montserrat text-navy text-base font-medium hover:text-blue">
+            Resources
           </a>
-          <div className="border-b border-navy mx-8" />
+          <div className="border-b border-navy/20 mx-8" />
           <a
             href="/alumni"
-            className="block px-3 py-2 font-vindey text-navy text-xl hover:text-blue">
-            ALUMNI
+            className="block px-3 py-2 font-montserrat text-navy text-base font-medium hover:text-blue">
+            Alumni
           </a>
-          <div className="border-b border-navy mx-8" />
+          <div className="border-b border-navy/20 mx-8" />
           <a
             href="/events"
-            className="block px-3 py-2 font-vindey text-navy text-xl hover:text-blue">
-            EVENTS
+            className="block px-3 py-2 font-montserrat text-navy text-base font-medium hover:text-blue">
+            Events
           </a>
-          <div className="border-b border-navy mx-8" />
+          <div className="border-b border-navy/20 mx-8" />
           <a
             href="/team"
-            className="block px-3 py-2 font-vindey text-navy text-xl hover:text-blue">
-            TEAM
+            className="block px-3 py-2 font-montserrat text-navy text-base font-medium hover:text-blue">
+            Team
           </a>
-          <div className="border-b border-navy mx-8" />
+          <div className="border-b border-navy/20 mx-8" />
           <a
             href="/"
-            className="block px-3 py-2 font-vindey text-navy text-xl hover:text-blue">
-            HOME
+            className="block px-3 py-2 font-montserrat text-navy text-base font-medium hover:text-blue">
+            Home
           </a>
         </div>
       </motion.div>
