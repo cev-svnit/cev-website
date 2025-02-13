@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import InfoSection from "@/components/home/InfoSection";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
-import PipelineBackground from "@/components/home/PipelineBackground";
 
 export default function Home() {
   return (
