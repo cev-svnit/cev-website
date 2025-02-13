@@ -82,8 +82,8 @@ const Footer = () => {
             <h3 className="font-montserrat text-[#000080] text-xl font-semibold mb-8 tracking-tight">
               Quick Links
             </h3>
-            <ul className="space-y-4 text-center">
-              {["Home", "Team", "Events", "Alumni", "Resources"].map(
+            <ul className="space-y-1 sm:space-y-2 font-vindey text-center">
+              {["Home", "Team", "Events", "Alumni", "Resources", "Horizon"].map(
                 (item, index) => (
                   <motion.li key={item} variants={itemVariants}>
                     <motion.div 

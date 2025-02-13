@@ -34,6 +34,11 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center justify-end flex-1 space-x-8">
             <a
+              href="/horizon"
+              className="font-vindey text-cnavy text-xl hover:text-blue transition-colors">
+              HORIZON
+            </a>
+            <a
               href="/resources"
               className="font-montserrat text-navy text-base font-medium hover:text-blue transition-colors">
               Resources

@@ -129,3 +129,24 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+.jersey-10-regular {
+  font-family: "Jersey 10";
+  font-weight: bolder;
+  font-style: normal;
+}
