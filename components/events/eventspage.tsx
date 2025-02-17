@@ -21,25 +21,25 @@ export default function EventsPage() {
 const eventItems: GridItem[] = [
     {
       id: 'finfiesta',
-      image: "/images/finfiesta.jpeg",
+      image: "/images/eventsimages/finfiesta.jpeg",
       title: "FinFiesta 2024: A Journey Through Financial Brilliance",
       description: "From 14th to 16th September, FinFiesta 2024 brought together finance enthusiasts for three days of learning, competition, and strategic brilliance. The event featured insightful talks from industry leaders, dynamic stock market challenges, and engaging financial games like Auction and Monopoly. It was a celebration of financial expertise, fostering knowledge, collaboration, and innovation among participants.",
     },
     {
       id:'strategix',
-      image: "/images/strategix.png",
+      image: "/images/eventsimages/strategix.png",
        title: "Strategix 3.0: The Ultimate Case Study Challenge",
        description: "Strategix 3.0 invites students nationwide to showcase their problem-solving skills and creativity in a dynamic three-round competition. Hosted on the online platform Unstop this event ensures accessibility to participants from across the country. Don’t miss your chance to push boundaries, think outside the box, and compete for the title of ultimate strategist",
     },
     {
       id: 'dalalStreet',
-      image: "/images/DalalStreet.png",
+      image: "/images/eventsimages/DalalStreet.png",
       title: "Dalal Street-2024: Relive 1992's Stock Market Thrills ",
       description: "Dalal Street-2024, organized by Mindbend 2024 in collaboration with CEV and StockGro, brings the excitement of stock trading to life. Set in the year 1992, this offline competition challenges participants to strategize, buy, and sell stocks to maximize their portfolio value. With INR 15,000 in prize money at stake, it’s the ultimate test of market expertise and decision-making.",
     },
     {
       id:'escapify',
-      image: "/images/escapify.jpeg",
+      image: "/images/eventsimages/escapify.jpeg",
       title: "Escapify: An Unforgettable Adventure for Freshmen",
       description: "Escapify is an immersive journey designed to introduce freshmen to the thrill of adventure and the vibrant world of our club. Step into a realm of captivating challenges that test your wits, spark your curiosity, and reveal hidden wonders. Join us as we transcend reality and create unforgettable moments in this one-of-a-kind escapade!",
     }
@@ -48,31 +48,31 @@ const eventItems: GridItem[] = [
   const workshopItems: GridItem[] = [
         {
           id:'workshop1',
-          image: "/images/horizon.jpeg",
+          image: "/images/eventsimages/horizon.jpeg",
           title: "Horizon Magazine: A Year of Breakthroughs and Innovation",
           description: "Step into the world of innovation with Horizon Magazine, a curated collection of major breakthroughs and events from each month of the year. Celebrate the milestones that shaped science, technology, and creativity, and discover the ideas that continue to inspire change.",
         },
         {
           id:'workshop2',
-          image: "/images/Gamedev.jpeg",
+          image: "/images/eventsimages/Gamedev.jpeg",
           title: "Game Development Workshop: Create Your Own Virtual Worlds!",
           description: "An immersive Game Development Workshop, presented by MINDBEND in collaboration with CEV and Red & White Multimedia Education. This workshop is designed for gaming enthusiasts who want to learn how to create their own virtual worlds, equipping you with the skills to transform your gaming ideas into reality. Unlock your creativity and innovation in the exciting field of game development!",
         },
         {
           id:'workshop3',
-          image: "/images/bootcamp.jpeg",
+          image: "/images/eventsimages/bootcamp.jpeg",
           title: "Data Science Bootcamp: Master Real-World Financial Insights!",
           description: "This 18-day Bootcamp offers an immersive experience in Data Science, exclusively for CEV members. Participants will explore key topics like building algorithmic trading bots, analyzing market trends, leveraging financial sentiment for predictions, and optimizing premium pricing for insurance policies. Gain hands-on experience and tackle real-world challenges in this comprehensive program!",
         },
         {
           id:'workshop4',
-          image: "/images/portfolio.jpeg",
+          image: "/images/eventsimages/portfolio.jpeg",
           title: "Portfolio-Making: Showcasing Creativity and Personal Branding!",
           description: "The portfolio-making competition, exclusive to CEV executives, tasked individuals with designing unique portfolio websites. Participants showcased creativity, technical skills, and personal branding through visually appealing designs. The event emphasized originality, user experience, and the effective presentation of achievements and skills.",
         },
         {
           id:'workshop5',
-          image: "/images/researchintern.jpeg",
+          image: "/images/eventsimages/researchintern.jpeg",
           title: "Research Internship Workshop: Unlock Opportunities at IITs & IIMs!",
           description: "Exclusively for Cutting Edge Visionaries Executives, this event is your gateway to unlocking top research internship opportunities. Dive into a comprehensive roadmap, strategic application techniques, and insights into IIT & IIM opportunities. Gain insider strategies, direct mentorship, and unfiltered institutional insights to elevate your research journey.",
         },
