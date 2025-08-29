@@ -1,5 +1,5 @@
 import React from "react";
-import FlipCard from "../alumni/FlipCard";
+import FlipCard from "./FlipCard";
 import styles from './Flipcard.module.css';
 import ScrollButton from "./ScrollButton";
 

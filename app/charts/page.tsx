@@ -7,7 +7,7 @@ import EventsPage from "../../components/events/eventspage"
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Navbarrrr />
 
       <EventsPage />
 
